@@ -3,7 +3,7 @@
 ## A simple spell checker written in Go
 
 
-`go build`
+`go build`  
 `./spellcheker`
 
 ```
