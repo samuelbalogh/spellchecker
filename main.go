@@ -9,6 +9,7 @@ import (
 	"encoding/json"
 	
 	"github.com/gorilla/mux"
+	"github.com/gorilla/handlers"
 )
 
 var dict = getDictionary()
@@ -151,5 +152,5 @@ func findLikelySpellings(w http.ResponseWriter, r *http.Request) {
 func main() {
         router := mux.NewRouter()
 	router.HandleFunc("/check", findLikelySpellings).Methods("POST")
-	http.ListenAndServe(":8000", router)
+        http.ListenAndServe(":8001", handlers.CORS()(router))
 }
