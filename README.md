@@ -24,7 +24,7 @@ $ curl -X POST localhost:8000/check -F "text=mistakus happon everywherre"
 ## Details
 
 It is based on the [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance).
-It outputs the matrices used to calculate the distance, which are, in the above scenario:
+It outputs the matrices used to calculate the distance, which are, for `mistakus happon everywherre`:
 
 
 ```
