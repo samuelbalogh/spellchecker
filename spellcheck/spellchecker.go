@@ -87,7 +87,7 @@ func getDistance(levMatrix [][]int, source string, target string) (int) {
 }
 
 
-func calculateDistance(source string, target string) (int) {
+func CalculateDistance(source string, target string) (int) {
 	mtx := getLevMatrix(source, target)
 	distance := getDistance(mtx, source, target)
 	return distance
