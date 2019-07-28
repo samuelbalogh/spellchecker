@@ -2,3 +2,9 @@ github.com/gorilla/handlers v1.4.0 h1:XulKRWSQK5uChr4pEgSE4Tc/OcmnU9GJuSwdog/tZs
 github.com/gorilla/handlers v1.4.0/go.mod h1:Qkdc/uu4tH4g6mTK6auzZ766c4CA0Ng8+o/OAirnOIQ=
 github.com/gorilla/mux v1.7.3 h1:gnP5JzjVOuiZD07fKKToCAOjS0yOpj/qPETTXCCS6hw=
 github.com/gorilla/mux v1.7.3/go.mod h1:1lud6UwP+6orDFRuTfBEV8e9/aOM/c4fVVCaMa2zaAs=
+github.com/samuelbalogh/levenshtein v0.0.0-20190728101155-52b5e9feb395 h1:DsaiJCD5+cQ+QzkpYGOhVDY1gbANCcoebvwo+5BVPKw=
+github.com/samuelbalogh/levenshtein v0.0.0-20190728101155-52b5e9feb395/go.mod h1:XDh/TNBiDX4eGD+MMKJ/fMnEj64T/XDUW+qU9KxrwHQ=
+github.com/samuelbalogh/levenshtein v0.0.0-20190728101742-d6f7b7e6e65e h1:CZXWT0YoPufrDPviJJeKnmowPAD4digQxVyXjx7gqDk=
+github.com/samuelbalogh/levenshtein v0.0.0-20190728101742-d6f7b7e6e65e/go.mod h1:XDh/TNBiDX4eGD+MMKJ/fMnEj64T/XDUW+qU9KxrwHQ=
+github.com/samuelbalogh/levenshtein v0.0.0-20190728102227-1ee6d71ee32e h1:ickjFDZ7XblFbUOZEsLJ8aLtJeu5fvxCmqLuV1RDvLc=
+github.com/samuelbalogh/levenshtein v0.0.0-20190728102227-1ee6d71ee32e/go.mod h1:XDh/TNBiDX4eGD+MMKJ/fMnEj64T/XDUW+qU9KxrwHQ=

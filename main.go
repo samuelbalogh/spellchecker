@@ -2,13 +2,12 @@ package main
 
 import (
 	"os"
-	"fmt"
 	"bufio"
 	"strings"
 	"net/http"
 	"encoding/json"
-	"spellchecker"
 	
+	"github.com/samuelbalogh/levenshtein"
 	"github.com/gorilla/mux"
 	"github.com/gorilla/handlers"
 )
@@ -35,36 +34,6 @@ func getDictionary() []string {
 	return wordList
 }
 
-
-func getLikelySpelling(word string, dictionary []string) (string) {
-	var mostLikelySpelling string
-	var distance int
-	var mtx  [][]int
-
-	distance = len(word)
-
-	for _, dictWord := range dictionary {
-		levMatrix := getLevMatrix(word, dictWord)
-
-		distanceToCurrentWord := getDistance(levMatrix, word, dictWord)
-		if distanceToCurrentWord < distance {
-			distance = distanceToCurrentWord
-			mostLikelySpelling = dictWord
-			mtx = levMatrix
-		}
-		
-	} 
-	if len(mostLikelySpelling) > 0 {
-		printLevMatrix(word, mostLikelySpelling, mtx) 
-		fmt.Println(mostLikelySpelling)
-	} else {
-		mostLikelySpelling = word
-	}
-
-	return mostLikelySpelling
-}
-
-
 func findLikelySpellings(w http.ResponseWriter, r *http.Request) {
 	text := r.FormValue("text")	
 
@@ -73,7 +42,7 @@ func findLikelySpellings(w http.ResponseWriter, r *http.Request) {
 	results := []string{}
 
 	for _, word := range words {
-		likelySpelling := getLikelySpelling(word, dict)
+		likelySpelling := levenshtein.GetLikelySpelling(word, dict)
 		results = append(results, likelySpelling)
 	}
 
