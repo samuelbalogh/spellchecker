@@ -4,12 +4,6 @@ import (
 	"os"
 	"fmt"
 	"bufio"
-	"strings"
-	"net/http"
-	"encoding/json"
-	
-	"github.com/gorilla/mux"
-	"github.com/gorilla/handlers"
 )
 
 
