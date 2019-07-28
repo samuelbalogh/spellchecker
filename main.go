@@ -125,9 +125,12 @@ func getLikelySpelling(word string, dictionary []string) (string) {
 		}
 		
 	} 
-	
-	printLevMatrix(word, mostLikelySpelling, mtx) 
-	fmt.Println(mostLikelySpelling)
+	if len(mostLikelySpelling) > 0 {
+		printLevMatrix(word, mostLikelySpelling, mtx) 
+		fmt.Println(mostLikelySpelling)
+	} else {
+		mostLikelySpelling = word
+	}
 
 	return mostLikelySpelling
 }
