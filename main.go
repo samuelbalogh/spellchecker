@@ -92,6 +92,13 @@ func getDistance(levMatrix [][]int, source string, target string) (int) {
 }
 
 
+func calculateDistance(source string, target string) (int) {
+	mtx := getLevMatrix(source, target)
+	distance := getDistance(mtx, source, target)
+	return distance
+}
+
+
 func getDictionary() []string {
 	file, err := os.Open("20k.txt")
 	check(err)
