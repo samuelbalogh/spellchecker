@@ -1,7 +1,3 @@
-
-
-
-
 function checkPhrase() {
   let text = document.getElementById("textToCheck").value
   let oReq = new XMLHttpRequest();
